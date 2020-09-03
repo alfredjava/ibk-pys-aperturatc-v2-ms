@@ -1,0 +1,33 @@
+[
+	{
+		"operation": "shift",
+		"spec": {
+			"MessageRequest": {
+				"@Header": "MessageRequest.Header",
+				"@Body.envioCorreo": {
+					"identity": "MessageRequest.Body.envioCorreo.identity",
+					"credential": "MessageRequest.Body.envioCorreo.credential",
+					"messages": {
+						"*": {
+							"message": {
+								"id": "MessageRequest.Body.envioCorreo.messages[&2].message.id",
+								"from": "MessageRequest.Body.envioCorreo.messages[&2].message.from",
+								"destination": "MessageRequest.Body.envioCorreo.messages[&2].message.destination",
+								"cc": "MessageRequest.Body.envioCorreo.messages[&2].message.cc",
+								"cco": "MessageRequest.Body.envioCorreo.messages[&2].message.cco",
+								"emailRespuesta": "MessageRequest.Body.envioCorreo.messages[&2].message.emailRespuesta",
+								"type": "MessageRequest.Body.envioCorreo.messages[&2].message.type",
+								"templateName": "MessageRequest.Body.envioCorreo.messages[&2].message.templateName",
+								"tags": "MessageRequest.Body.envioCorreo.messages[&2].message.tags",
+								"carrier": "MessageRequest.Body.envioCorreo.messages[&2].message.carrier",
+								"attachments": "MessageRequest.Body.envioCorreo.messages[&2].message.attachments",
+								"appSource": "MessageRequest.Body.envioCorreo.messages[&2].message.appSource",
+								"parameters": "MessageRequest.Body.envioCorreo.messages[&2].message.parameters"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+]

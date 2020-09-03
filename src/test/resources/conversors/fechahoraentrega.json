@@ -1,0 +1,25 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "MessageRequest": {
+        "@header": "MessageRequest.Header",
+        "@body.crearTarjetaCreditoResponse.numeroTarjeta": "MessageRequest.Body.fechaHoraEntrega.numeroTarjeta",
+        "@body.aperturarTC.datosCliente.cliente.numeroDocumento": "MessageRequest.Body.fechaHoraEntrega.numeroDocumento",
+        "@body.aperturarTC.datosCliente.cliente.idCliente": "MessageRequest.Body.fechaHoraEntrega.codigoUnico",
+        "@body.fechaAlta": "MessageRequest.Body.fechaHoraEntrega.fechaAlta",
+        "@header.HeaderRequest.request.consumerId": "MessageRequest.Body.fechaHoraEntrega.usuarioCoordinador",
+        "@body.fechaEntrega": "MessageRequest.Body.fechaHoraEntrega.fechaEntrega",
+        "@body.horaEntrega": "MessageRequest.Body.fechaHoraEntrega.horaEntrega",
+        "@body.aperturarTC.informacionEntrega.numeroTelefono": "MessageRequest.Body.fechaHoraEntrega.numeroCelular",
+        "@body.aperturarTC.informacionEntrega.codigoDepartamento": "MessageRequest.Body.fechaHoraEntrega.codigoDepartamento",
+        "@body.aperturarTC.informacionEntrega.codigoProvincia": "MessageRequest.Body.fechaHoraEntrega.codigoProvincia",
+        "@body.aperturarTC.informacionEntrega.codigoDistrito": "MessageRequest.Body.fechaHoraEntrega.codigoDistrito",
+        "#13": "MessageRequest.Body.fechaHoraEntrega.codigoCourier",
+        "@body.aperturarTC.informacionEntrega.direccion": "MessageRequest.Body.fechaHoraEntrega.direccionEntrega",
+        "@body.aperturarTC.informacionEntrega.referencia": "MessageRequest.Body.fechaHoraEntrega.referencia",
+        "#A": "MessageRequest.Body.fechaHoraEntrega.estado"
+      }
+    }
+  }
+]

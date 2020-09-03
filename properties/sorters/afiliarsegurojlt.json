@@ -1,0 +1,38 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "MessageRequest": {
+        "@Header": "MessageRequest.Header",
+        "@Body.AfiliarSeguroJlt.codigoCanal": "MessageRequest.Body.AfiliarSeguroJlt.codigoCanal",
+        "@Body.AfiliarSeguroJlt.codigoProducto": "MessageRequest.Body.AfiliarSeguroJlt.codigoProducto",
+        "@Body.AfiliarSeguroJlt.codigoPlan": "MessageRequest.Body.AfiliarSeguroJlt.codigoPlan",
+        "@Body.AfiliarSeguroJlt.codigoCampania": "MessageRequest.Body.AfiliarSeguroJlt.codigoCampania",
+        "@Body.AfiliarSeguroJlt.codigoFrecuenciaPago": "MessageRequest.Body.AfiliarSeguroJlt.codigoFrecuenciaPago",
+        "@Body.AfiliarSeguroJlt.medioPago.codigo": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.codigo",
+        "@Body.AfiliarSeguroJlt.medioPago.tipo": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.tipo",
+        "@Body.AfiliarSeguroJlt.medioPago.numeroTarjeta": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.numeroTarjeta",
+        "@Body.AfiliarSeguroJlt.medioPago.fechaVencimiento": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.fechaVencimiento",
+        "@Body.AfiliarSeguroJlt.prima": "MessageRequest.Body.AfiliarSeguroJlt.prima",
+        "@Body.AfiliarSeguroJlt.cliente.tipoDocumento": "MessageRequest.Body.AfiliarSeguroJlt.cliente.tipoDocumento",
+        "@Body.AfiliarSeguroJlt.cliente.numeroDocumento": "MessageRequest.Body.AfiliarSeguroJlt.cliente.numeroDocumento",
+        "@Body.AfiliarSeguroJlt.cliente.idCliente": "MessageRequest.Body.AfiliarSeguroJlt.cliente.idCliente",
+        "@Body.AfiliarSeguroJlt.cliente.email": "MessageRequest.Body.AfiliarSeguroJlt.cliente.email",
+        "@Body.AfiliarSeguroJlt.cliente.numeroTarjetaAsegurada": "MessageRequest.Body.AfiliarSeguroJlt.cliente.numeroTarjetaAsegurada",
+        "@Body.AfiliarSeguroJlt.cliente.flagCompletarDatos": "MessageRequest.Body.AfiliarSeguroJlt.cliente.flagCompletarDatos",
+        "@Body.AfiliarSeguroJlt.cliente.datos.primerNombre": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.primerNombre",
+        "@Body.AfiliarSeguroJlt.cliente.datos.segundoNombre": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.segundoNombre",
+        "@Body.AfiliarSeguroJlt.cliente.datos.apellidoPaterno": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.apellidoPaterno",
+        "@Body.AfiliarSeguroJlt.cliente.datos.apellidoMaterno": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.apellidoMaterno",
+        "@Body.AfiliarSeguroJlt.cliente.datos.direccion": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.direccion",
+        "@Body.AfiliarSeguroJlt.cliente.datos.codigoUbigeo": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.codigoUbigeo",
+        "@Body.AfiliarSeguroJlt.cliente.datos.telefono": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.telefono",
+        "@Body.AfiliarSeguroJlt.cliente.datos.fechaNacimiento": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.fechaNacimiento",
+        "@Body.AfiliarSeguroJlt.cliente.datos.estadoCivil": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.estadoCivil",
+        "@Body.AfiliarSeguroJlt.cliente.datos.sexo": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.sexo",
+        "@Body.AfiliarSeguroJlt.cliente.flagActualizarDireccion": "MessageRequest.Body.AfiliarSeguroJlt.cliente.flagActualizarDireccion"
+      }
+    }
+    }
+
+]

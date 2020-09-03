@@ -1,0 +1,17 @@
+# Spring properties
+spring:
+  application:
+    name: aperturatcv2-service  # Identify this application
+  freemarker:
+    enabled: false     # Ignore Eureka dashboard FreeMarker templates
+#  thymeleaf:
+#    cache: false       # Allow Thymeleaf templates to be reloaded at runtime
+#    prefix: classpath:/web-server/templates/    # Trailing / mandatory
+                       # Template location for this application only
+
+# HTTP Server
+server:
+  port: 8080  # HTTP (Jersey) port
+
+logging:
+  config: /data/ibk-pys-aperturatc-v2-ms/properties/log4j2.xml

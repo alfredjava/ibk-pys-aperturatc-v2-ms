@@ -1,0 +1,102 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "MessageRequest": {
+        "@header.HeaderRequest.request.serviceId": "MessageRequest.Header.HeaderRequest.request.serviceId",
+        "#CLOUD": "MessageRequest.Header.HeaderRequest.request.consumerId",
+        "@header.HeaderRequest.request.moduleId": "MessageRequest.Header.HeaderRequest.request.moduleId",
+        "@header.HeaderRequest.request.channelCode": "MessageRequest.Header.HeaderRequest.request.channelCode",
+        "@header.HeaderRequest.request.messageId": "MessageRequest.Header.HeaderRequest.request.messageId",
+        "@header.HeaderRequest.request.timestamp": "MessageRequest.Header.HeaderRequest.request.timestamp",
+        "@header.HeaderRequest.request.countryCode": "MessageRequest.Header.HeaderRequest.request.countryCode",
+        "@header.HeaderRequest.request.groupMember": "MessageRequest.Header.HeaderRequest.request.groupMember",
+        "@header.HeaderRequest.request.referenceNumber": "MessageRequest.Header.HeaderRequest.request.referenceNumber",
+        "@header.HeaderRequest.identity": "MessageRequest.Header.HeaderRequest.identity",
+        "@(1,MessageRequest.header.HeaderRequest.request.timestamp)": "MessageRequest.Body.registrarMonitor.fechaOperacion",
+        "#08650": "MessageRequest.Body.registrarMonitor.codigoAlerta",
+        "#tipoMensaje": "MessageRequest.Body.registrarMonitor.parametros[0].nombre",
+        "#numeroTarjetaAES": "MessageRequest.Body.registrarMonitor.parametros[1].nombre",
+        "@body.aperturarTC.registroMonitor.monitorACF.tarjetaLogin": "MessageRequest.Body.registrarMonitor.parametros[1].valor",
+        "#tarjetaRegistro": "MessageRequest.Body.registrarMonitor.parametros[2].nombre",
+        "@body.crearTarjetaCreditoResponse.numeroTarjeta": "MessageRequest.Body.registrarMonitor.parametros[2].valor",
+        "#numeroTarjeta": "MessageRequest.Body.registrarMonitor.parametros[3].nombre",
+        "@(1,MessageRequest.body.aperturarTC.registroMonitor.monitorACF.tarjetaLogin)": "MessageRequest.Body.registrarMonitor.parametros[3].valor",
+        "#numeroTarjetaEncriptadoSHA256": "MessageRequest.Body.registrarMonitor.parametros[4].nombre",
+        "#codigoTransaccion": "MessageRequest.Body.registrarMonitor.parametros[5].nombre",
+        "#reverso": "MessageRequest.Body.registrarMonitor.parametros[6].nombre",
+        "#fechaTransmision": "MessageRequest.Body.registrarMonitor.parametros[7].nombre",
+        "@body.fechaTransmision": "MessageRequest.Body.registrarMonitor.parametros[7].valor",
+        "#numeroTransaccion": "MessageRequest.Body.registrarMonitor.parametros[8].nombre",
+        "#fechaTransaccion": "MessageRequest.Body.registrarMonitor.parametros[9].nombre",
+        "@body.fechaTransaccion": "MessageRequest.Body.registrarMonitor.parametros[9].valor",
+        "#horaTransaccion": "MessageRequest.Body.registrarMonitor.parametros[10].nombre",
+        "@body.horaTransaccion": "MessageRequest.Body.registrarMonitor.parametros[10].valor",
+        "#mcc": "MessageRequest.Body.registrarMonitor.parametros[11].nombre",
+        "#codigoPaisAdq": "MessageRequest.Body.registrarMonitor.parametros[12].nombre",
+        "#codigoPaisTC": "MessageRequest.Body.registrarMonitor.parametros[13].nombre",
+        "#codigoPaisEmisor": "MessageRequest.Body.registrarMonitor.parametros[14].nombre",
+        "#condicionPtoVenta": "MessageRequest.Body.registrarMonitor.parametros[15].nombre",
+        "#idAdq": "MessageRequest.Body.registrarMonitor.parametros[16].nombre",
+        "#idOrganizacion": "MessageRequest.Body.registrarMonitor.parametros[17].nombre",
+        "#codigoRespuesta": "MessageRequest.Body.registrarMonitor.parametros[18].nombre",
+        "#razonRespuesta": "MessageRequest.Body.registrarMonitor.parametros[19].nombre",
+        "#codigoServicio": "MessageRequest.Body.registrarMonitor.parametros[20].nombre",
+        "#codigoEquipoCliente": "MessageRequest.Body.registrarMonitor.parametros[21].nombre",
+        "@header.HeaderRequest.identity.deviceId": "MessageRequest.Body.registrarMonitor.parametros[21].valor",
+        "#codigoTienda": "MessageRequest.Body.registrarMonitor.parametros[22].nombre",
+        "#nombreComercio": "MessageRequest.Body.registrarMonitor.parametros[23].nombre",
+        "#localidadComercio": "MessageRequest.Body.registrarMonitor.parametros[24].nombre",
+        "#paisOrigen": "MessageRequest.Body.registrarMonitor.parametros[25].nombre",
+        "#codigoMonedaTransaccion": "MessageRequest.Body.registrarMonitor.parametros[26].nombre",
+        "@body.aperturarTC.altaTC.codigoMoneda": "MessageRequest.Body.registrarMonitor.parametros[26].valor",
+        "#bin": "MessageRequest.Body.registrarMonitor.parametros[27].nombre",
+        "#fechaNacimiento": "MessageRequest.Body.registrarMonitor.parametros[28].nombre",
+        "@body.fechaNacimientoMonitor": "MessageRequest.Body.registrarMonitor.parametros[28].valor",
+        "#codigoCliente": "MessageRequest.Body.registrarMonitor.parametros[29].nombre",
+        "@body.aperturarTC.datosCliente.cliente.idCliente": "MessageRequest.Body.registrarMonitor.parametros[29].valor",
+        "#direccionCorrespondencia": "MessageRequest.Body.registrarMonitor.parametros[30].nombre",
+        "#correoElectronico": "MessageRequest.Body.registrarMonitor.parametros[31].nombre",
+        "@body.aperturarTC.informacionEntrega.mail": "MessageRequest.Body.registrarMonitor.parametros[31].valor",
+        "#telefonoMovil": "MessageRequest.Body.registrarMonitor.parametros[32].nombre",
+        "@body.aperturarTC.informacionEntrega.numeroTelefono": "MessageRequest.Body.registrarMonitor.parametros[32].valor",
+        "#codigoProcedencia": "MessageRequest.Body.registrarMonitor.parametros[33].nombre",
+        "@body.aperturarTC.registroMonitor.monitorACF": {
+          "tipoMensaje": "MessageRequest.Body.registrarMonitor.parametros[0].valor",
+          "tarjetaLogin": "MessageRequest.Body.registrarMonitor.parametros[4].valor",
+          "codigoTransaccion": "MessageRequest.Body.registrarMonitor.parametros[5].valor",
+          "reverso": "MessageRequest.Body.registrarMonitor.parametros[6].valor",
+          "condicionPtoVenta": "MessageRequest.Body.registrarMonitor.parametros[15].valor",
+          "codigoRespuesta": "MessageRequest.Body.registrarMonitor.parametros[18].valor",
+          "razonRespuesta": "MessageRequest.Body.registrarMonitor.parametros[19].valor",
+          "codigoServicio": "MessageRequest.Body.registrarMonitor.parametros[20].valor",
+          "codigoTienda": "MessageRequest.Body.registrarMonitor.parametros[22].valor",
+          "nombreComercio": "MessageRequest.Body.registrarMonitor.parametros[23].valor",
+          "localidadComercio": "MessageRequest.Body.registrarMonitor.parametros[24].valor",
+          "paisOrigen": "MessageRequest.Body.registrarMonitor.parametros[25].valor",
+          "direccionCorrespondencia": "MessageRequest.Body.registrarMonitor.parametros[30].valor",
+          "codigoProcedencia": "MessageRequest.Body.registrarMonitor.parametros[33].valor"
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-default-beta",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "registrarMonitor": {
+            "parametros?": {
+              "*": {
+                "valor": null,
+                "longitud": null,
+                "tipo": null,
+                "decimales": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

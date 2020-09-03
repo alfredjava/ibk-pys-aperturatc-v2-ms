@@ -1,0 +1,79 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "MessageRequest": {
+        "@header": "MessageRequest.Header",
+        "@body.aperturarTC.altaTC.codigoMarca": "MessageRequest.Body.marca",
+        "@body.aperturarTC.altaTC.indicadorTipo": "MessageRequest.Body.tipo",
+        "#ibkwebsoap": "MessageRequest.Body.envioCorreo.identity",
+        "#IbKsoap#sbx": "MessageRequest.Body.envioCorreo.credential",
+        "#3": "MessageRequest.Body.envioCorreo.messages[0].message.id",
+        "@body.aperturarTC.informacionEntrega.mail": "MessageRequest.Body.envioCorreo.messages[0].message.destination",
+        "#nombre": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[0].parameter.key",
+        "@body.aperturarTC.datosCliente.cliente.primerNombre": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[0].parameter.value",
+        "#email": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[1].parameter.key",
+        "@(1,MessageRequest.body.aperturarTC.operacionMedioContacto.actualizarMedioContactoGeneral.descripcion)": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[1].parameter.value",
+        "#fecha": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[2].parameter.key",
+        "@body.fechaLargaCorreo": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[2].parameter.value"
+      }
+    }
+  },
+  {
+    "operation": "default",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "envioCorreo": {
+            "messages[]": {
+              "*": {
+                "*": {
+                  "from": null,
+                  "cc": null,
+                  "cco": null,
+                  "emailRespuesta": null,
+                  "type": "email",
+                  "tags": null,
+                  "carrier": null,
+                  "attachments": null,
+                  "appSource": "PYS",
+                  "parameters": []
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "envioCorreo": {
+            "*": {
+              "*": {
+                "message": {
+                  "templateName": "=concat(pys_cambio_mail,'')"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    }
+    ,
+  {
+    "operation": "remove",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "marca": "",
+          "tipo": ""
+        }
+      }
+    }
+  }
+]

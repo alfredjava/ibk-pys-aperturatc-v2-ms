@@ -1,0 +1,224 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "MessageRequest": {
+        "@header": "MessageRequest.Header",
+        "@(1,MessageRequest.header.HeaderRequest.request.timestamp)": "MessageRequest.Body.registrarMonitor.fechaOperacion",
+        "#0344": "MessageRequest.Body.registrarMonitor.codigoAlerta",
+        "#idCliente": "MessageRequest.Body.registrarMonitor.parametros[0].nombre",
+        "@body.aperturarTC.datosCliente.cliente.numeroDocumento": "MessageRequest.Body.registrarMonitor.parametros[0].valor",
+        "#processingCode": "MessageRequest.Body.registrarMonitor.parametros[1].nombre",
+        "#grupoTrx": "MessageRequest.Body.registrarMonitor.parametros[2].nombre",
+        "@body.aperturarTC.registrarADQ.expediente.codigoTipoGestion": "MessageRequest.Body.registrarMonitor.parametros[2].valor",
+        "#sucursalTrx": "MessageRequest.Body.registrarMonitor.parametros[3].nombre",
+        "@body.aperturarTC.registrarADQ.expediente.codigoPuntoVenta": "MessageRequest.Body.registrarMonitor.parametros[3].valor",
+        "#codigoProducto": "MessageRequest.Body.registrarMonitor.parametros[4].nombre",
+        "@body.aperturarTC.registrarADQ.expediente.codigoTipoTramite": "MessageRequest.Body.registrarMonitor.parametros[4].valor",
+        "#codigoSubProducto": "MessageRequest.Body.registrarMonitor.parametros[5].nombre",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.codigoOcupacion": {
+          "AGR": {
+            "#3": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "REP": {
+            "#34": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "GER": {
+            "#16": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "EST": {
+            "#15": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "JEF": {
+            "#18": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "MIL": {
+            "#21": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "MIN": {
+            "#44": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "NEG": {
+            "#23": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "OPE": {
+            "#27": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "OTR": {
+            "#28": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "OFI": {
+            "#26": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "PEH": {
+            "#29": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "PRF": {
+            "#30": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "SEG": {
+            "#36": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "TRA": {
+            "#38": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "TEC": {
+            "#37": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          },
+          "VTO": {
+            "#39": "MessageRequest.Body.registrarMonitor.parametros[5].valor"
+          }
+        },
+        "#fechaTransaccion": "MessageRequest.Body.registrarMonitor.parametros[6].nombre",
+        "@body.fechaTransaccion": "MessageRequest.Body.registrarMonitor.parametros[6].valor",
+        "#horaTransaccion": "MessageRequest.Body.registrarMonitor.parametros[7].nombre",
+        "@body.horaTransaccion": "MessageRequest.Body.registrarMonitor.parametros[7].valor",
+        "#fechaHoraTrx": "MessageRequest.Body.registrarMonitor.parametros[8].nombre",
+        "@body.fechaHoraTrx": "MessageRequest.Body.registrarMonitor.parametros[8].valor",
+        "#montoTotalTransaccion": "MessageRequest.Body.registrarMonitor.parametros[9].nombre",
+        "@body.aperturarTC.altaTC.importeLinea": "MessageRequest.Body.registrarMonitor.parametros[9].valor",
+        "#montoEfectivo": "MessageRequest.Body.registrarMonitor.parametros[10].nombre",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.ingresoVariableMensual": "MessageRequest.Body.registrarMonitor.parametros[10].valor",
+        "#montoChequePropio": "MessageRequest.Body.registrarMonitor.parametros[11].nombre",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.ingresoFijoMensual": "MessageRequest.Body.registrarMonitor.parametros[11].valor",
+        "#cuentaOrigen": "MessageRequest.Body.registrarMonitor.parametros[12].nombre",
+        "@body.aperturarTC.registroMonitor.monitorCore.cuentaOrigen": "MessageRequest.Body.registrarMonitor.parametros[12].valor",
+        "#canal": "MessageRequest.Body.registrarMonitor.parametros[13].nombre",
+        "@body.aperturarTC.registrarADQ.expediente.codigoCanal": "MessageRequest.Body.registrarMonitor.parametros[13].valor",
+        "#statusCuentaProducto": "MessageRequest.Body.registrarMonitor.parametros[14].nombre",
+        "@body.aperturarTC.registroMonitor.monitorCore.statusCuentaProducto": "MessageRequest.Body.registrarMonitor.parametros[14].valor",
+        "#fechaCompensacion": "MessageRequest.Body.registrarMonitor.parametros[15].nombre",
+        "@body.fechaNacimientoMonitor": "MessageRequest.Body.registrarMonitor.parametros[15].valor",
+        "#codigoClienteOrigen": "MessageRequest.Body.registrarMonitor.parametros[16].nombre",
+        "@body.codigoUnicoCore": "MessageRequest.Body.registrarMonitor.parametros[16].valor",
+        "#sucursalAperturaCuenta": "MessageRequest.Body.registrarMonitor.parametros[17].nombre",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.listaDireccion.direccion[0].codigoUbigeo": "MessageRequest.Body.registrarMonitor.parametros[17].valor",
+        "#sucursalAperturaDestino": "MessageRequest.Body.registrarMonitor.parametros[18].nombre",
+        "@body.aperturarTC.registroMonitor.monitorCore.sucursalAperturaDestino": "MessageRequest.Body.registrarMonitor.parametros[18].valor",
+        "#codigoUsuario": "MessageRequest.Body.registrarMonitor.parametros[19].nombre",
+        "@body.aperturarTC.registrarADQ.expediente.codigoPromotor": "MessageRequest.Body.registrarMonitor.parametros[19].valor",
+        "#codigoUsuarioAutorizador": "MessageRequest.Body.registrarMonitor.parametros[20].nombre",
+        "@header.HeaderRequest.identity.supervisorId": "MessageRequest.Body.registrarMonitor.parametros[20].valor",
+        "#indicadorSobregiro": "MessageRequest.Body.registrarMonitor.parametros[21].nombre",
+        "@body.aperturarTC.datosCliente.cliente.estadoCivil": {
+          "U": {
+            "#1": "MessageRequest.Body.registrarMonitor.parametros[21].valor"
+          },
+          "D": {
+            "#4": "MessageRequest.Body.registrarMonitor.parametros[21].valor"
+          },
+          "O": {
+            "#5": "MessageRequest.Body.registrarMonitor.parametros[21].valor"
+          },
+          "W": {
+            "#6": "MessageRequest.Body.registrarMonitor.parametros[21].valor"
+          },
+          "M": {
+            "#7": "MessageRequest.Body.registrarMonitor.parametros[21].valor"
+          }
+        },
+        "#tipoCuenta": "MessageRequest.Body.registrarMonitor.parametros[22].nombre",
+        "#1": "MessageRequest.Body.registrarMonitor.parametros[22].valor", //codigoProducto que se envia a ADQ en MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[0].item
+        "#indicadorCuentaRegistrada": "MessageRequest.Body.registrarMonitor.parametros[23].nombre",
+        "@body.aperturarTC.altaTC.indicadorTipo": "MessageRequest.Body.registrarMonitor.parametros[23].valor",
+        "#direccionIP": "MessageRequest.Body.registrarMonitor.parametros[24].nombre",
+        "#nombreTitularCtaOrigen": "MessageRequest.Body.registrarMonitor.parametros[25].nombre",
+        "@body.concatenarDireccion": "MessageRequest.Body.registrarMonitor.parametros[25].valor",
+        "#nombreClienteTitularCtaDestino": "MessageRequest.Body.registrarMonitor.parametros[26].nombre",
+        "@body.concatenarDireccionLaboral": "MessageRequest.Body.registrarMonitor.parametros[26].valor",
+        "#direccionDomicilio": "MessageRequest.Body.registrarMonitor.parametros[27].nombre",
+        "@body.aperturarTC.registroMonitor.monitorCore.direccionDomicilio": "MessageRequest.Body.registrarMonitor.parametros[27].valor",
+        "#telefonoResidencia": "MessageRequest.Body.registrarMonitor.parametros[28].nombre",
+        "@body.aperturarTC.registroMonitor.monitorCore.telefonoResidencia": "MessageRequest.Body.registrarMonitor.parametros[28].valor",
+        "#telefonoOficina": "MessageRequest.Body.registrarMonitor.parametros[29].nombre",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.listaTelefono.telefono[0].numeroTelefono": "MessageRequest.Body.registrarMonitor.parametros[29].valor",
+        "#telefonoOtro": "MessageRequest.Body.registrarMonitor.parametros[30].nombre",
+        "@body.aperturarTC.datosCliente.cliente.listaTelefono.telefono[0].numeroCelular": "MessageRequest.Body.registrarMonitor.parametros[30].valor",
+        "#correoElectronicoEmail": "MessageRequest.Body.registrarMonitor.parametros[31].nombre",
+        "@body.aperturarTC.altaTC.codigoCorrespondencia": {
+          "CORR*": {
+            "": "MessageRequest.Body.registrarMonitor.parametros[31].valor"
+          },
+          "PRIN*": {
+            "": "MessageRequest.Body.registrarMonitor.parametros[31].valor"
+          },
+          "*": {
+            "@(2,body.aperturarTC.datosCliente.cliente.email)": "MessageRequest.Body.registrarMonitor.parametros[31].valor"
+          }
+        },
+        "#tipoDocumento": "MessageRequest.Body.registrarMonitor.parametros[32].nombre",
+        "@body.aperturarTC.datosCliente.cliente.tipoDocumento": "MessageRequest.Body.registrarMonitor.parametros[32].valor",
+        "#flagTipoCambioEspecial": "MessageRequest.Body.registrarMonitor.parametros[33].nombre",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.situacionLaboral": {
+          "0": {
+            "#1": "MessageRequest.Body.registrarMonitor.parametros[33].valor"
+          },
+          "2": {
+            "#3": "MessageRequest.Body.registrarMonitor.parametros[33].valor"
+          },
+          "3": {
+            "#4": "MessageRequest.Body.registrarMonitor.parametros[33].valor"
+          },
+          "4": {
+            "#5": "MessageRequest.Body.registrarMonitor.parametros[33].valor"
+          },
+          "5": {
+            "#7": "MessageRequest.Body.registrarMonitor.parametros[33].valor"
+          },
+          "7": {
+            "#9": "MessageRequest.Body.registrarMonitor.parametros[33].valor"
+          },
+          "8": {
+            "#10": "MessageRequest.Body.registrarMonitor.parametros[33].valor"
+          },
+          "9": {
+            "#11": "MessageRequest.Body.registrarMonitor.parametros[33].valor"
+          }
+        },
+        "#tipoCuadre": "MessageRequest.Body.registrarMonitor.parametros[34].nombre",
+        "@body.aperturarTC.altaTC.codigoMarca": "MessageRequest.Body.registrarMonitor.parametros[34].valor",
+        "#codigoTarifa": "MessageRequest.Body.registrarMonitor.parametros[35].nombre",
+        "#UNO": "MessageRequest.Body.registrarMonitor.parametros[35].valor", //35 el valor UNO se sobreescribira abajo
+        "#importeOriginal": "MessageRequest.Body.registrarMonitor.parametros[36].nombre",
+        "@(1,MessageRequest.body.aperturarTC.altaTC.importeLinea)": "MessageRequest.Body.registrarMonitor.parametros[36].valor",
+        "#origenAlerta": "MessageRequest.Body.registrarMonitor.parametros[37].nombre",
+        "@body.aperturarTC.datosCliente.cliente.listaDireccion.direccion[0].codigoUbigeo": "MessageRequest.Body.registrarMonitor.parametros[37].valor"
+      }
+    }
+  },
+  {
+    "operation": "modify-default-beta",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "registrarMonitor": {
+            "parametros?": {
+              "*": {
+                "valor": null,
+                "longitud": null,
+                "tipo": null,
+                "decimales": null
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "registrarMonitor": {
+            "parametros": {
+              "[35]": {
+                "valor": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,88 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "MessageRequest": {
+        "@Header": "MessageRequest.Header",
+        "@Body": {
+          "Registrar": {
+            "expediente": {
+              "codigoCanal": "MessageRequest.Body.Registrar.expediente.codigoCanal",
+              "codigoPuntoVenta": "MessageRequest.Body.Registrar.expediente.codigoPuntoVenta",
+              "codigoTienda": "MessageRequest.Body.Registrar.expediente.codigoTienda",
+              "codigoPromotor": "MessageRequest.Body.Registrar.expediente.codigoPromotor",
+              "usuario": "MessageRequest.Body.Registrar.expediente.usuario",
+              "ipTerminal": "MessageRequest.Body.Registrar.expediente.ipTerminal",
+              "codigoTipoGestion": "MessageRequest.Body.Registrar.expediente.codigoTipoGestion",
+              "codigoEstadoProceso": "MessageRequest.Body.Registrar.expediente.codigoEstadoProceso",
+              "codigoProceso": "MessageRequest.Body.Registrar.expediente.codigoProceso",
+              "codigoSubProceso": "MessageRequest.Body.Registrar.expediente.codigoSubProceso",
+              "codigoTipoTramite": "MessageRequest.Body.Registrar.expediente.codigoTipoTramite"
+            },
+            "listaIntegrante": {
+              "*": {
+                "integrante": {
+                  "listaDireccionPersona": {
+                    "*": {
+                      "direccionPersona": {
+                        "tipoDireccion": "MessageRequest.Body.Registrar.listaIntegrante[&5].integrante.listaDireccionPersona[&2].direccionPersona.tipoDireccion",
+                        "codigoTipoVivienda": "MessageRequest.Body.Registrar.listaIntegrante[&5].integrante.listaDireccionPersona[&2].direccionPersona.codigoTipoVivienda",
+                        "codigoTipoVia": "MessageRequest.Body.Registrar.listaIntegrante[&5].integrante.listaDireccionPersona[&2].direccionPersona.codigoTipoVia",
+                        "nombreVia": "MessageRequest.Body.Registrar.listaIntegrante[&5].integrante.listaDireccionPersona[&2].direccionPersona.nombreVia",
+                        "numeroMza": "MessageRequest.Body.Registrar.listaIntegrante[&5].integrante.listaDireccionPersona[&2].direccionPersona.numeroMza",
+                        "numeroInterior": "MessageRequest.Body.Registrar.listaIntegrante[&5].integrante.listaDireccionPersona[&2].direccionPersona.numeroInterior",
+                        "lote": "MessageRequest.Body.Registrar.listaIntegrante[&5].integrante.listaDireccionPersona[&2].direccionPersona.lote",
+                        "codigoUbigeo": "MessageRequest.Body.Registrar.listaIntegrante[&5].integrante.listaDireccionPersona[&2].direccionPersona.codigoUbigeo",
+                        "sectorEtapa": "MessageRequest.Body.Registrar.listaIntegrante[&5].integrante.listaDireccionPersona[&2].direccionPersona.sectorEtapa",
+                        "codigoUrbanizacion": "MessageRequest.Body.Registrar.listaIntegrante[&5].integrante.listaDireccionPersona[&2].direccionPersona.codigoUrbanizacion",
+                        "referenciaDireccion": "MessageRequest.Body.Registrar.listaIntegrante[&5].integrante.listaDireccionPersona[&2].direccionPersona.referenciaDireccion",
+                        "tiempoResidenciaDomicilio": "MessageRequest.Body.Registrar.listaIntegrante[&5].integrante.listaDireccionPersona[&2].direccionPersona.tiempoResidenciaDomicilio"
+                      }
+                    }
+                  },
+                  "listaTelefonoPersona": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.listaTelefonoPersona",
+                  "codigoTipoIntegrante": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoTipoIntegrante",
+                  "codigoUnico": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoUnico",
+                  "codigoTipoDocumento": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoTipoDocumento",
+                  "numeroDocumento": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.numeroDocumento",
+                  "numeroPasaporte": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.numeroPasaporte",
+                  "apellidoPaterno": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.apellidoPaterno",
+                  "apellidoMaterno": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.apellidoMaterno",
+                  "primerNombre": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.primerNombre",
+                  "segundoNombre": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.segundoNombre",
+                  "fechaNacimiento": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.fechaNacimiento",
+                  "codigoSexo": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoSexo",
+                  "codigoNivelEducacion": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoNivelEducacion",
+                  "codigoEstadoCivil": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoEstadoCivil",
+                  "numeroDependientes": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.numeroDependientes",
+                  "codigoNacionalidad": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoNacionalidad",
+                  "codigoPaisNacimiento": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoPaisNacimiento",
+                  "codigoPaisNacionalidad": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoPaisNacionalidad",
+                  "codigoPaisResidencia": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoPaisResidencia",
+                  "tiempoResidenciaPeru": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.tiempoResidenciaPeru",
+                  "emailPersonal": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.emailPersonal",
+                  "codigoSituacionLaboral": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoSituacionLaboral",
+                  "codigoOcupacionLaboral": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoOcupacionLaboral",
+                  "numeroRuc": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.numeroRuc",
+                  "codigoCargoActual": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoCargoActual",
+                  "codigoGiroActividad": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoGiroActividad",
+                  "codigoTipoContrato": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoTipoContrato",
+                  "fechaInicioContrato": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.fechaInicioContrato",
+                  "fechaFinContrato": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.fechaFinContrato",
+                  "ingresoFijoMensual": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.ingresoFijoMensual",
+                  "ingresoVariableMensual": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.ingresoVariableMensual",
+                  "patrimonio": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.patrimonio",
+                  "totalPatrimonio": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.totalPatrimonio",
+                  "totalOtrosIngresos": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.totalOtrosIngresos",
+                  "emailLaboral": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.emailLaboral",
+                  "razonSocial": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.razonSocial"
+                }
+              }
+            },
+            "listaProductos": "MessageRequest.Body.Registrar.listaProductos"
+          }
+        }
+      }
+    }
+  }
+  ]

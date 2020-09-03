@@ -1,0 +1,89 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "MessageRequest": {
+        "@header": "MessageRequest.Header",
+        "@body.templateSeguro": "MessageRequest.Body.templateSeguro",
+        "@body.aperturarTC.altaTC.codigoMarca": "MessageRequest.Body.marca",
+        "@body.aperturarTC.altaTC.indicadorTipo": "MessageRequest.Body.tipo",
+        "#ibkwebsoap": "MessageRequest.Body.envioCorreo.identity",
+        "#IbKsoap#sbx": "MessageRequest.Body.envioCorreo.credential",
+        "#2": "MessageRequest.Body.envioCorreo.messages[0].message.id",
+        "@body.aperturarTC.informacionEntrega.mail": "MessageRequest.Body.envioCorreo.messages[0].message.destination",
+        "#marcaTipo": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[0].parameter.key",
+        "@body.nombreProducto": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[0].parameter.value",
+        "#fecha": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[1].parameter.key",
+        "@body.fechaLargaCorreo": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[1].parameter.value",
+        "#nombre": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[2].parameter.key",
+        "@body.aperturarTC.datosCliente.cliente.primerNombre": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[2].parameter.value",
+        "#linea": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[3].parameter.key",
+        "@body.lineaEmail": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[3].parameter.value",
+        "#tasa": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[4].parameter.key",
+        "@body.aperturarTC.registrarADQ.listaProductos.producto[0].listaItems.item[1]": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[4].parameter.value",
+        "#fechaPago": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[5].parameter.key",
+        "@body.aperturarTC.altaTC.diaPago": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[5].parameter.value",
+        "#direccion": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[6].parameter.key",
+        "@body.descripcionDireccion": "MessageRequest.Body.envioCorreo.messages[0].message.parameters[6].parameter.value"
+      }
+    }
+  },
+  {
+    "operation": "default",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "envioCorreo": {
+            "messages[]": {
+              "*": {
+                "*": {
+                  "from": null,
+                  "cc": null,
+                  "cco": null,
+                  "emailRespuesta": null,
+                  "type": "email",
+                  "tags": null,
+                  "carrier": null,
+                  "attachments": null,
+                  "appSource": "PYS",
+                  "parameters": []
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "envioCorreo": {
+            "*": {
+              "*": {
+                "message": {
+                  "templateName": "=concat(@(5,templateSeguro),'')"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    }
+    ,
+  {
+    "operation": "remove",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "marca": "",
+          "tipo": "",
+          "templateSeguro": ""
+        }
+      }
+    }
+  }
+]

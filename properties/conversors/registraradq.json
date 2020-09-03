@@ -1,0 +1,350 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "MessageRequest": {
+        "@header.HeaderRequest.request.serviceId": "MessageRequest.Header.HeaderRequest.request.serviceId",
+        "#CLOUD": "MessageRequest.Header.HeaderRequest.request.consumerId",
+        "@header.HeaderRequest.request.moduleId": "MessageRequest.Header.HeaderRequest.request.moduleId",
+        "@header.HeaderRequest.request.channelCode": "MessageRequest.Header.HeaderRequest.request.channelCode",
+        "@header.HeaderRequest.request.messageId": "MessageRequest.Header.HeaderRequest.request.messageId",
+        "@header.HeaderRequest.request.timestamp": "MessageRequest.Header.HeaderRequest.request.timestamp",
+        "@header.HeaderRequest.request.countryCode": "MessageRequest.Header.HeaderRequest.request.countryCode",
+        "@header.HeaderRequest.request.groupMember": "MessageRequest.Header.HeaderRequest.request.groupMember",
+        "@header.HeaderRequest.request.referenceNumber": "MessageRequest.Header.HeaderRequest.request.referenceNumber",
+        "@header.HeaderRequest.identity": "MessageRequest.Header.HeaderRequest.identity",
+        "@body.aperturarTC.registrarADQ.expediente.codigoCanal": "MessageRequest.Body.Registrar.expediente.codigoCanal",
+        "@body.aperturarTC.registrarADQ.expediente.codigoPuntoVenta": "MessageRequest.Body.Registrar.expediente.codigoPuntoVenta",
+        "@body.aperturarTC.registrarADQ.expediente.codigoTienda": "MessageRequest.Body.Registrar.expediente.codigoTienda",
+        "@body.aperturarTC.registrarADQ.expediente.codigoPromotor": "MessageRequest.Body.Registrar.expediente.codigoPromotor",
+        "@header.HeaderRequest.identity.userId": "MessageRequest.Body.Registrar.expediente.usuario",
+        "@header.HeaderRequest.identity.deviceId": "MessageRequest.Body.Registrar.expediente.ipTerminal",
+        "@body.aperturarTC.registrarADQ.expediente.codigoTipoGestion": "MessageRequest.Body.Registrar.expediente.codigoTipoGestion",
+        "@body.aperturarTC.registrarADQ.expediente.codigoEstadoProceso": "MessageRequest.Body.Registrar.expediente.codigoEstadoProceso",
+        "@body.aperturarTC.registrarADQ.expediente.codigoProceso": "MessageRequest.Body.Registrar.expediente.codigoProceso",
+        "@body.aperturarTC.registrarADQ.expediente.codigoSubProceso": "MessageRequest.Body.Registrar.expediente.codigoSubProceso",
+        "@body.aperturarTC.registrarADQ.expediente.codigoTipoTramite": "MessageRequest.Body.Registrar.expediente.codigoTipoTramite",
+        "@body.aperturarTC.datosCliente.cliente.listaDireccion.direccion": {
+          "*": {
+            "tipoDireccion": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&1].direccionPersona.tipoDireccion",
+            "codigoTipoVivienda": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&1].direccionPersona.codigoTipoVivienda",
+            "codigoTipoVia": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&1].direccionPersona.codigoTipoVia",
+            "nombreVia": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&1].direccionPersona.nombreVia",
+            "numeroCalle": {
+              "*": {
+                "$(0,0)": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&3].direccionPersona.numeroMza"
+              },
+              "": {
+                "@(2,numeroManzana)": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&3].direccionPersona.numeroMza"
+              }
+            },
+            "numeroManzana": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&1].direccionPersona.numeroManzana",
+            "numeroInterior": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&1].direccionPersona.numeroInterior",
+            "lote": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&1].direccionPersona.lote",
+            "codigoUbigeo": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&1].direccionPersona.codigoUbigeo",
+            "sector": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&1].direccionPersona.sectorEtapa",
+            "urbanizacion": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&1].direccionPersona.codigoUrbanizacion",
+            "referencia": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&1].direccionPersona.referenciaDireccion",
+            "tiempoResidenciaDomicilio": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaDireccionPersona[&1].direccionPersona.tiempoResidenciaDomicilio"
+          }
+        },
+        "@body.aperturarTC.datosCliente.cliente.listaTelefono.telefono": {
+          "*": {
+            "tipoTelefono": {
+              "R": {
+                "#1": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaTelefonoPersona[&3].telefonoPersona.tipoTelefono"
+              },
+              "C": {
+                "#3": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaTelefonoPersona[&3].telefonoPersona.tipoTelefono"
+              },
+              "T": {
+                "#4": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaTelefonoPersona[&3].telefonoPersona.tipoTelefono"
+              },
+              "*": {
+                "#3": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaTelefonoPersona[&3].telefonoPersona.tipoTelefono"
+              }
+            },
+            "codigoCiudad": {
+              "0*": {
+                "$(0,1)": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaTelefonoPersona[&3].telefonoPersona.codigoDiscado"
+              }
+            },
+            "numeroCelular": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaTelefonoPersona[&1].telefonoPersona.numeroTelefono",
+            "numeroAnexo": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.listaTelefonoPersona[&1].telefonoPersona.numeroAnexo"
+          }
+        },
+        "@body.aperturarTC.datosCliente.integrantes.integrante": {
+          "*": {
+            "listaDireccion": {
+              "direccion": {
+                "*": {
+                  "tipoDireccion": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaDireccionPersona[&1].direccionPersona.tipoDireccion",
+                  "codigoTipoVivienda": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaDireccionPersona[&1].direccionPersona.codigoTipoVivienda",
+                  "codigoTipoVia": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaDireccionPersona[&1].direccionPersona.codigoTipoVia",
+                  "nombreVia": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaDireccionPersona[&1].direccionPersona.nombreVia",
+                  "numeroCalle": {
+                    "*": {
+                      "$(0,0)": "MessageRequest.Body.Registrar.listaIntegrante[&6].integrante.listaDireccionPersona[&3].direccionPersona.numeroMza"
+                    },
+                    "": {
+                      "@(2,numeroManzana)": "MessageRequest.Body.Registrar.listaIntegrante[&6].integrante.listaDireccionPersona[&3].direccionPersona.numeroMza"
+                    }
+                  },
+                  "numeroManzana": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaDireccionPersona[&1].direccionPersona.numeroManzana",
+                  "numeroInterior": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaDireccionPersona[&1].direccionPersona.numeroInterior",
+                  "lote": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaDireccionPersona[&1].direccionPersona.lote",
+                  "codigoUbigeo": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaDireccionPersona[&1].direccionPersona.codigoUbigeo",
+                  "sector": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaDireccionPersona[&1].direccionPersona.sectorEtapa",
+                  "urbanizacion": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaDireccionPersona[&1].direccionPersona.codigoUrbanizacion",
+                  "referencia": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaDireccionPersona[&1].direccionPersona.referenciaDireccion",
+                  "tiempoResidenciaDomicilio": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaDireccionPersona[&1].direccionPersona.tiempoResidenciaDomicilio"
+                }
+              }
+            },
+            "listaTelefono": {
+              "telefono": {
+                "*": {
+                  "tipoTelefono": {
+                    "R": {
+                      "#1": "MessageRequest.Body.Registrar.listaIntegrante[&6].integrante.listaTelefonoPersona[&3].telefonoPersona.tipoTelefono"
+                    },
+                    "C": {
+                      "#3": "MessageRequest.Body.Registrar.listaIntegrante[&6].integrante.listaTelefonoPersona[&3].telefonoPersona.tipoTelefono"
+                    },
+                    "T": {
+                      "#4": "MessageRequest.Body.Registrar.listaIntegrante[&6].integrante.listaTelefonoPersona[&3].telefonoPersona.tipoTelefono"
+                    },
+                    "*": {
+                      "#3": "MessageRequest.Body.Registrar.listaIntegrante[&6].integrante.listaTelefonoPersona[&3].telefonoPersona.tipoTelefono"
+                    }
+                  },
+                  "codigoCiudad": {
+                    "0*": {
+                      "$(0,1)": "MessageRequest.Body.Registrar.listaIntegrante[&6].integrante.listaTelefonoPersona[&3].telefonoPersona.codigoDiscado"
+                    }
+                  },
+                  "numeroCelular": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaTelefonoPersona[&1].telefonoPersona.numeroTelefono",
+                  "numeroAnexo": "MessageRequest.Body.Registrar.listaIntegrante[&4].integrante.listaTelefonoPersona[&1].telefonoPersona.numeroAnexo"
+                }
+              }
+            },
+            "codigoTipoIntegrante": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.codigoTipoIntegrante",
+            "idCliente": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.codigoUnico",
+            "tipoDocumento": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.codigoTipoDocumento",
+            "numeroDocumento": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.numeroDocumento",
+            "numeroPasaporte": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.numeroPasaporte",
+            "apellidoPaterno": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.apellidoPaterno",
+            "apellidoMaterno": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.apellidoMaterno",
+            "primerNombre": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.primerNombre",
+            "segundoNombre": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.segundoNombre",
+            "fechaNacimiento": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.fechaNacimiento",
+            "sexo": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.codigoSexo",
+            "nivelEducacion": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.codigoNivelEducacion",
+            "estadoCivil": {
+              "S": {
+                "#D": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.codigoEstadoCivil"
+              },
+              "*": {
+                "$": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.codigoEstadoCivil"
+              }
+            },
+            "numeroDependientes": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.numeroDependientes",
+            "codigoNacionalidad": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.codigoNacionalidad",
+            "codigoPaisNacimiento": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.codigoPaisNacimiento",
+            "codigoPaisNacionalidad": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.codigoPaisNacionalidad",
+            "codigoPaisResidencia": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.codigoPaisResidencia",
+            "tiempoResidenciaPeru": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.tiempoResidenciaPeru",
+            "email": "MessageRequest.Body.Registrar.listaIntegrante[&1].integrante.emailPersonal",
+            "informacionLaboral": {
+              "situacionLaboral": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoSituacionLaboral",
+              "codigoOcupacion": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoOcupacionLaboral",
+              "rucEmpresa": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.numeroRuc",
+              "cargoActual": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoCargoActual",
+              "codigoGiro": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoGiroActividad",
+              "codigoTipoContrato": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.codigoTipoContrato",
+              "fechaInicioContrato": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.fechaInicioContrato",
+              "fechaFinContrato": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.fechaFinContrato",
+              "ingresoFijoMensual": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.ingresoFijoMensual",
+              "ingresoVariableMensual": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.ingresoVariableMensual",
+              "patrimonio": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.patrimonio",
+              "totalPatrimonio": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.totalPatrimonio",
+              "totalOtrosIngresos": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.totalOtrosIngresos",
+              "email": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.emailLaboral",
+              "razonSocial": "MessageRequest.Body.Registrar.listaIntegrante[&2].integrante.razonSocial"
+            }
+          }
+        },
+        "@body.aperturarTC.datosCliente.cliente.codigoTipoIntegrante": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoTipoIntegrante",
+        "@body.aperturarTC.datosCliente.cliente.idCliente": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoUnico",
+        "@body.aperturarTC.datosCliente.cliente.tipoDocumento": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoTipoDocumento",
+        "@body.aperturarTC.datosCliente.cliente.numeroDocumento": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.numeroDocumento",
+        "@body.aperturarTC.datosCliente.cliente.numeroPasaporte": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.numeroPasaporte",
+        "@body.aperturarTC.datosCliente.cliente.apellidoPaterno": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.apellidoPaterno",
+        "@body.aperturarTC.datosCliente.cliente.apellidoMaterno": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.apellidoMaterno",
+        "@body.aperturarTC.datosCliente.cliente.primerNombre": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.primerNombre",
+        "@body.aperturarTC.datosCliente.cliente.segundoNombre": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.segundoNombre",
+        "@body.aperturarTC.datosCliente.cliente.fechaNacimiento": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.fechaNacimiento",
+        "@body.aperturarTC.datosCliente.cliente.sexo": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoSexo",
+        "@body.aperturarTC.datosCliente.cliente.nivelEducacion": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoNivelEducacion",
+        "@body.aperturarTC.datosCliente.cliente.estadoCivil": {
+          "S": {
+            "#D": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoEstadoCivil"
+          },
+          "*": {
+            "$": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoEstadoCivil"
+          }
+        },
+        "@body.aperturarTC.datosCliente.cliente.numeroDependientes": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.numeroDependientes",
+        "@body.aperturarTC.datosCliente.cliente.codigoNacionalidad": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoNacionalidad",
+        "@body.aperturarTC.datosCliente.cliente.codigoPaisNacimiento": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoPaisNacimiento",
+        "@body.aperturarTC.datosCliente.cliente.codigoPaisNacionalidad": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoPaisNacionalidad",
+        "@body.aperturarTC.datosCliente.cliente.codigoPaisResidencia": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoPaisResidencia",
+        "@body.aperturarTC.datosCliente.cliente.tiempoResidenciaPeru": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.tiempoResidenciaPeru",
+        "@body.aperturarTC.datosCliente.cliente.email": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.emailPersonalCli",
+        "@body.aperturarTC.operacionMedioContacto.crearMedioContactoGeneral.descripcion": {
+          "*": {
+            "$": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.emailPersonal"
+          }
+        },
+        "@body.aperturarTC.operacionMedioContacto.actualizarMedioContactoGeneral.descripcion": {
+          "*": {
+            "$": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.emailPersonal"
+          }
+        },
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.situacionLaboral": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoSituacionLaboral",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.codigoOcupacion": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoOcupacionLaboral",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.rucEmpresa": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.numeroRuc",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.cargoActual": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoCargoActual",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.codigoGiro": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoGiroActividad",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.codigoTipoContrato": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.codigoTipoContrato",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.fechaInicioContrato": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.fechaInicioContrato",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.fechaFinContrato": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.fechaFinContrato",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.ingresoFijoMensual": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.ingresoFijoMensual",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.ingresoVariableMensual": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.ingresoVariableMensual",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.patrimonio": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.patrimonio",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.totalPatrimonio": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.totalPatrimonio",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.totalOtrosIngresos": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.totalOtrosIngresos",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.email": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.emailLaboral",
+        "@body.aperturarTC.datosCliente.cliente.informacionLaboral.razonSocial": "MessageRequest.Body.Registrar.listaIntegrante[0].integrante.razonSocial",
+        "@body.aperturarTC.altaTC.codigoMarca": "MessageRequest.Body.Registrar.listaProductos[].producto.codigoProducto",
+        "#1": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[0].item",
+        "@body.aperturarTC.altaTC.indicadorTipo": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[1].item",
+        "@body.crearTarjetaCreditoResponse.numeroTarjeta": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[2].item",
+        "@body.crearTarjetaCreditoResponse.numeroCuenta": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[3].item",
+        "@body.aperturarTC.registrarADQ.listaProductos.producto[0].listaItems.item[0]": {
+          "1-*": {
+            "$(0,1)": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[4].item"
+          },
+          "*": {
+            "$": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[4].item"
+          }
+        },
+        "@body.aperturarTC.altaTC.codigoMoneda": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[5].item",
+        "@body.aperturarTC.altaTC.importeLinea": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[6].item",
+        "@body.aperturarTC.registrarADQ.listaProductos.producto[0].listaItems.item[1]": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[7].item",
+        "@body.aperturarTC.altaTC.diaPago": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[8].item",
+        "@body.aperturarTC.altaTC.nombrePlastico": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[9].item",
+        "@body.crearTarjetaCreditoResponse.fechaAlta": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[10].item",
+        "@body.aperturarTC.altaTC.indicadorDevolucionCashback": {
+          "": {
+            "#0": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[11].item"
+          },
+          "*": {
+            "$": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[11].item"
+          }
+        },
+        "@body.aperturarTC.altaTC.codigoCorrespondencia": {
+          "CORR*": {
+            "#1": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[12].item"
+          },
+          "EMA*": {
+            "#2": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[12].item"
+          },
+          "*EMPE": {
+            "#4": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[12].item"
+          },
+          "*EMJO": {
+            "#4": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[12].item"
+          },
+          "": {
+            "#1": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[12].item"
+          }
+        },
+        "@body.aperturarTC.registrarADQ.listaProductos.producto[0].listaItems.item[2]": {
+          "": {
+            "#TRASH": "MessageRequest.TRASH"
+          },
+          "*": {
+            "$": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[13].item"
+          }
+        },
+        "@body.aperturarTC.registrarADQ.listaProductos.producto[0].listaItems.item[3]": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[14].item",
+        "@body.aperturarTC.registrarADQ.listaProductos.producto[0].listaItems.item[4]": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[15].item",
+        "@body.aperturarTC.registrarADQ.listaProductos.producto[0].listaItems.item[5]": "MessageRequest.Body.Registrar.listaProductos[0].producto.listaItems[16].item"
+      }
+    }
+  },
+  {
+    "operation": "modify-default-beta",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "Registrar": {
+            "listaIntegrante": {
+              "*": {
+                "integrante?": {
+                  "emailPersonal": "=concat(@(1,emailPersonalCli),'')",
+                  "listaDireccionPersona": {
+                    "*": {
+                      "direccionPersona?": {
+                        "numeroMza": "=concat(@(1,numeroManzana),'')"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "listaProductos": {
+              "*": {
+                "producto": {
+                  "listaItems?": {
+                    "*": {
+                      "item": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  ,
+  {
+    "operation": "remove",
+    "spec": {
+      "MessageRequest": {
+        "TRASH": "",
+        "Body": {
+          "Registrar": {
+            "listaIntegrante": {
+              "*": {
+                "integrante": {
+                  "emailPersonalCli":"",
+                  "listaDireccionPersona": {
+                    "*": {
+                      "direccionPersona": {
+                        "numeroManzana": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

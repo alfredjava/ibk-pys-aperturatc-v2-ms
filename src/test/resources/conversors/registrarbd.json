@@ -1,0 +1,61 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "MessageRequest": {
+        "@header.HeaderRequest": "MessageRequest.Header.HeaderRequest",
+        "@body.aperturarTC.datosCliente.cliente.idCliente": "MessageRequest.Body.registrarBd.codUnico",
+        "@body.aperturarTC.datosCliente.cliente.tipoDocumento": "MessageRequest.Body.registrarBd.tipoDocIde",
+        "@body.aperturarTC.datosCliente.cliente.numeroDocumento": "MessageRequest.Body.registrarBd.nroDocIde",
+        "@header.HeaderRequest.request.consumerId": "MessageRequest.Body.registrarBd.codCanal",
+        "@body.aperturarTC.informacionEntrega.indicador": "MessageRequest.Body.registrarBd.indicador",
+        "@body.crearTarjetaCreditoResponse.numeroTarjeta": "MessageRequest.Body.registrarBd.nroTarjeta",
+        "@body.aperturarTC.altaTC.codigoMarca": "MessageRequest.Body.registrarBd.codMarcaTarjeta",
+        "@body.aperturarTC.altaTC.indicadorTipo": "MessageRequest.Body.registrarBd.codTipoTarjeta",
+        "@body.fechaAlta": "MessageRequest.Body.registrarBd.fechaAlta",
+        "@body.aperturarTC.informacionEntrega.mail": "MessageRequest.Body.registrarBd.email",
+        "@body.aperturarTC.informacionEntrega.numeroTelefono": "MessageRequest.Body.registrarBd.nroTelEntrega",
+        "@body.aperturarTC.informacionEntrega.tipoDireccion": "MessageRequest.Body.registrarBd.tipoDirEntrega",
+        "@body.aperturarTC.informacionEntrega.direccion": "MessageRequest.Body.registrarBd.direccionEntrega",
+        "@body.aperturarTC.informacionEntrega.codigoDistrito": "MessageRequest.Body.registrarBd.codDistEntrega",
+        "@body.aperturarTC.informacionEntrega.codigoProvincia": "MessageRequest.Body.registrarBd.codProvEntrega",
+        "@body.aperturarTC.informacionEntrega.codigoDepartamento": "MessageRequest.Body.registrarBd.codDepaEntrega",
+        "@body.aperturarTC.informacionEntrega.referencia": "MessageRequest.Body.registrarBd.refDirEntrega",
+        "@body.aperturarTC.informacionEntrega.codigoTiendaEntrega": "MessageRequest.Body.registrarBd.codTiendaEntrega",
+        "@body.crearTarjetaCreditoResponse.numeroCuenta": "MessageRequest.Body.registrarBd.nroCuenta",
+        "@(1,MessageRequest.header.HeaderRequest.request.consumerId)": "MessageRequest.Body.registrarBd.regUsuarioCoordinador",
+        "@body.fechaEntrega": "MessageRequest.Body.registrarBd.fechaEntrega",
+        "@body.horaEntrega": "MessageRequest.Body.registrarBd.horaInicioEntrega",
+        "@body.aperturarTC.registrarADQ.listaProductos.producto[0].listaItems.item[3]": "MessageRequest.Body.registrarBd.categoria1",
+        "@body.aperturarTC.registrarADQ.listaProductos.producto[0].listaItems.item[4]": "MessageRequest.Body.registrarBd.categoria2",
+        "@body.aperturarTC.registrarADQ.listaProductos.producto[0].listaItems.item[5]": "MessageRequest.Body.registrarBd.categoria3"
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "registrarBd": {
+            "listaCategorias": "=concat(@(1,categoria1),',',@(1,categoria2),',',@(1,categoria3))"
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "remove",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "registrarBd": {
+            "categoria1": "",
+            "categoria2": "",
+            "categoria3": ""
+          }
+        }
+      }
+    }
+  }
+]

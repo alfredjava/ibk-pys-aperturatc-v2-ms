@@ -1,0 +1,11 @@
+[ {
+	"operation" : "shift",
+	"spec" : {
+		"@MessageRequest" : {
+			"@header" : "MessageRequest.Header",
+			"@Body.templateSeguro" : "MessageRequest.Body.templateSeguro",
+			"#1" : "MessageRequest.Body.consultarTCAdicionales.tipoConsulta",
+			"@body.aperturarTC.datosCliente.cliente.idCliente" : "MessageRequest.Body.consultarTCAdicionales.codigoUnico"
+		}
+	}
+} ]

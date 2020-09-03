@@ -1,0 +1,112 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ibk-pys-aperturatcv2-service
+  namespace: pys
+  labels:
+    product: tarjeta    
+    app: aperturatcv2
+    tier: backend
+    phase: prod
+    deployment: v1
+spec:
+  selector:
+    product: tarjeta
+    app: aperturatcv2
+  ports:
+   - protocol: TCP
+     port: 8080
+     name: http
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ibk-pys-aperturatcv2-ms
+  namespace: pys
+  labels:
+    product: tarjeta
+    app: aperturatcv2
+    tier: backend
+    phase: prod
+    deployment: v1 
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        product: tarjeta
+        app: aperturatcv2
+        tier: backend
+        phase: prod
+        deployment: v1
+    spec:
+      containers:
+      - image: registry.ng.bluemix.net/pys_ibk/ibk-pys-aperturatc-v2-ms:0.0.1-PROD
+        name: ibk-pys-aperturatcv2-ms
+        imagePullPolicy: Always
+        resources:
+            requests:
+              memory: "128Mi"
+            limits:
+              memory: "256Mi"
+        env:
+        - name: ambiente
+          value: "prod"
+        - name: version
+          value: "0.0.1"
+        - name: name
+          value: "ibk-pys-aperturatc-v2-ms"
+        - name: JAVA_OPTIONS
+          value: "-Xms64m -Xmx128m"   
+        - name: CONFIG_NO_SENSITIVE
+          valueFrom:
+            configMapKeyRef:
+              name: ibk-pys-aperturatc-v2-ms-properties   
+              key: config-prod.properties
+        - name: CONFIG_SENSITIVE
+          valueFrom:
+            secretKeyRef:
+              name: config-sensibles   
+              key: config-sensibles-prod.properties  
+        volumeMounts:
+        - mountPath: /data
+          name: pys-prod-volume
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        livenessProbe:
+          tcpSocket:
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /rest/read
+            port: 8080
+            httpHeaders:
+            - name: X-Forwarded-Proto
+              value: https
+          initialDelaySeconds: 90
+          periodSeconds: 60
+      volumes:
+      - name: pys-prod-volume
+        persistentVolumeClaim:
+          claimName: pys-prod
+      imagePullSecrets:
+      - name: bluemix-pys-secret
+---      
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: ibk-pys-aperturatcv2-hpa
+  namespace: pys
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1beta1
+    kind: Deployment
+    name: ibk-pys-aperturatcv2-ms
+  minReplicas: 2
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 10

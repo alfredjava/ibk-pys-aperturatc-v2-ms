@@ -1,0 +1,103 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "MessageRequest": {
+        "@header.HeaderRequest.request.serviceId": "MessageRequest.Header.HeaderRequest.request.serviceId",
+        "#CLOUD": "MessageRequest.Header.HeaderRequest.request.consumerId",
+        "@header.HeaderRequest.request.moduleId": "MessageRequest.Header.HeaderRequest.request.moduleId",
+        "@header.HeaderRequest.request.channelCode": "MessageRequest.Header.HeaderRequest.request.channelCode",
+        "@header.HeaderRequest.request.messageId": "MessageRequest.Header.HeaderRequest.request.messageId",
+        "@header.HeaderRequest.request.timestamp": "MessageRequest.Header.HeaderRequest.request.timestamp",
+        "@header.HeaderRequest.request.countryCode": "MessageRequest.Header.HeaderRequest.request.countryCode",
+        "@header.HeaderRequest.request.groupMember": "MessageRequest.Header.HeaderRequest.request.groupMember",
+        "@header.HeaderRequest.request.referenceNumber": "MessageRequest.Header.HeaderRequest.request.referenceNumber",
+        "@header.HeaderRequest.identity": "MessageRequest.Header.HeaderRequest.identity",
+        "@header.HeaderRequest.request.consumerId": "MessageRequest.Body.AfiliarSeguroJlt.codigoCanal",
+        "@body.aperturarTC.afiliarAon.codigoProducto": "MessageRequest.Body.AfiliarSeguroJlt.codigoProducto",
+        "@body.aperturarTC.afiliarAon.codigoPlan": "MessageRequest.Body.AfiliarSeguroJlt.codigoPlan",
+        "@body.aperturarTC.listaActualizarCampania.actualizaCampania[1].codigoCampania": "MessageRequest.Body.AfiliarSeguroJlt.codigoCampania",
+        "@body.aperturarTC.afiliarAon.codigoFrecuenciaPago": "MessageRequest.Body.AfiliarSeguroJlt.codigoFrecuenciaPago",
+        "@body.aperturarTC.afiliarAon.medioPago.codigo": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.codigoPrefijo",
+        "@body.aperturarTC.altaTC": {
+          "codigoMarca": {
+            "0*": {
+              "$(0,1)": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.codigoMarca"
+            }
+          }
+        },
+        "@body.aperturarTC.altaTC.indicadorTipo": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.indicadorTipo",
+        "@body.aperturarTC.afiliarAon.medioPago.tipo": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.tipo",
+        "@body.crearTarjetaCreditoResponse.numeroTarjeta": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.numeroTarjeta",
+        "@body.crearTarjetaCreditoResponse.fechaVencimiento": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.fechaVencimiento",
+        "@body.aperturarTC.afiliarAon.medioPago.numeroCuenta.codigoBanco": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.numeroCuenta.codigoBanco",
+        "@body.aperturarTC.afiliarAon.medioPago.numeroCuenta.codigoMoneda": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.numeroCuenta.codigoMoneda",
+        "@body.aperturarTC.afiliarAon.medioPago.numeroCuenta.codigoCategoria": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.numeroCuenta.codigoCategoria",
+        "@body.aperturarTC.afiliarAon.medioPago.numeroCuenta.codigoTienda": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.numeroCuenta.codigoTienda",
+        "@body.aperturarTC.afiliarAon.medioPago.numeroCuenta.numeroCuenta": "MessageRequest.Body.AfiliarSeguroJlt.medioPago.numeroCuenta.numeroCuenta",
+        "@body.aperturarTC.afiliarAon.prima.monto": "MessageRequest.Body.AfiliarSeguroJlt.prima.monto",
+        "@body.aperturarTC.afiliarAon.prima.moneda": "MessageRequest.Body.AfiliarSeguroJlt.prima.moneda",
+        "@body.aperturarTC.datosCliente.cliente.tipoDocumento": "MessageRequest.Body.AfiliarSeguroJlt.cliente.tipoDocumento",
+        "@body.aperturarTC.datosCliente.cliente.numeroDocumento": "MessageRequest.Body.AfiliarSeguroJlt.cliente.numeroDocumento",
+        "@body.aperturarTC.datosCliente.cliente.idCliente": "MessageRequest.Body.AfiliarSeguroJlt.cliente.idCliente",
+        "@body.aperturarTC.datosCliente.cliente.email": "MessageRequest.Body.AfiliarSeguroJlt.cliente.email",
+        "@body.aperturarTC.datosCliente.cliente.primerNombre": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.primerNombre",
+        "@body.aperturarTC.datosCliente.cliente.segundoNombre": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.segundoNombre",
+        "@body.aperturarTC.datosCliente.cliente.apellidoPaterno": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.apellidoPaterno",
+        "@body.aperturarTC.datosCliente.cliente.apellidoMaterno": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.apellidoMaterno",
+        "@body.aperturarTC.datosCliente.cliente.listaDireccion.direccion[0].codigoTipoVia": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.direccion1",
+        "@body.aperturarTC.datosCliente.cliente.listaDireccion.direccion[0].nombreVia": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.direccion2",
+        "@body.aperturarTC.datosCliente.cliente.listaDireccion.direccion[0].numeroInterior": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.direccion3",
+        "@body.aperturarTC.datosCliente.cliente.listaDireccion.direccion[0].codigoUbigeo": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.codigoUbigeo",
+        "@body.aperturarTC.datosCliente.cliente.listaTelefono.telefono[0].numeroCelular": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.telefono",
+        "@body.aperturarTC.datosCliente.cliente.fechaNacimiento": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.fechaNacimiento",
+        "@body.aperturarTC.datosCliente.cliente.estadoCivil": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.estadoCivil",
+        "@body.aperturarTC.datosCliente.cliente.sexo": "MessageRequest.Body.AfiliarSeguroJlt.cliente.datos.sexo",
+        "@body.aperturarTC.afiliarAon.flagActualizarDireccion": "MessageRequest.Body.AfiliarSeguroJlt.cliente.flagActualizarDireccion"
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "AfiliarSeguroJlt": {
+            "cliente": {
+              "numeroTarjetaAsegurada": "@(2,medioPago.numeroTarjeta)",
+              "datos": {
+                "direccion": "=concat(@(1,direccion1),' ',@(1,direccion2),' ',@(1,direccion3))"
+              }
+            },
+            "medioPago": {
+              "codigo": "=concat(@(1,codigoPrefijo),@(1,codigoMarca),@(1,indicadorTipo))"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "remove",
+    "spec": {
+      "MessageRequest": {
+        "Body": {
+          "AfiliarSeguroJlt": {
+            "cliente": {
+              "datos": {
+                "direccion1": "",
+                "direccion2": "",
+                "direccion3": ""
+              }
+            },
+            "medioPago": {
+              "codigoPrefijo": "",
+              "codigoMarca": "",
+              "indicadorTipo": ""
+            }
+          }
+        }
+      }
+    }
+  }
+]
